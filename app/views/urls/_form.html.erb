@@ -1,0 +1,9 @@
+<%= form_for @url do |f| %>
+  <p>
+    <%= f.text_field :long_url, placeholder: "Paste a link to shorten it"%>
+  </p>
+
+  <p>
+    <%= f.submit "SHORTEN" %>
+  </p>
+    <% end %>
