@@ -1,7 +1,11 @@
+<h1>Bitsy | URL Fun-Sized</h1>
+
+<%= render 'form' %>
+
 <table>
 <tr>
-<th>Original URL</th>
-<th>Shortened URL</th>
+<th>Your URL</th>
+<th>Bitsy URL</th>
 </tr>
 
 <%  @urls.each do |url| %>
@@ -13,5 +17,3 @@
     </tr>   
 <% end %>
 </table>
-
-<%= link_to "Shorten a Url!", new_url_path %>

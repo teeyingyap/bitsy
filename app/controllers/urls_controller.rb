@@ -1,15 +1,16 @@
 class UrlsController < ApplicationController
   def index
     @urls = Url.all
+    @url = Url.new
   end
 
   def show
     @url = Url.find(params[:id])
   end
 
-  def new
-    @url = Url.new
-  end
+  # def new
+  #   @url = Url.new
+  # end
   
   def create
     @url = Url.new(url_params)
@@ -31,7 +32,7 @@ class UrlsController < ApplicationController
     url = Url.find(params[:id])
     redirect_to url.long_url    
   end 
-  
+
   private 
 
   def url_params
